@@ -1,0 +1,31 @@
+# --- colcon 산출물 ---
+build/
+install/
+log/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+*.so.tmp
+
+# --- C/CUDA 확장 빌드 중간물 ---
+# (pcdet 확장을 다시 컴파일하면 생기는 것들. 소스 트리 안의 *.so 는
+#  런타임에 필요하므로 커밋 대상이며 여기서 제외하지 않는다.)
+*.o
+*.obj
+OpenPCDet/build/
+src/pointpillars_ros/OpenPCDet/build/
+
+# --- 데이터 / 추론 결과 ---
+*.bin
+!OpenPCDet/data/**/ImageSets/*
+csv/
+*.csv
+
+# --- 에디터 ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
